@@ -48,7 +48,6 @@ namespace MethodsPractice
             {
                 Console.Write("{0}\t", array[i]);
             }
-            return;
         }
 
         static void SortYourArray(int[] array)

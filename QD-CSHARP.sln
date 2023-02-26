@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsolePractice", "ConsolePractice\ConsolePractice.csproj", "{339912B2-2404-4F6D-BF2E-D4A886D81EF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsolePractice", "ConsolePractice\ConsolePractice.csproj", "{339912B2-2404-4F6D-BF2E-D4A886D81EF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathPractice", "MathPractice\MathPractice.csproj", "{40FCA462-58B6-4EDE-91F7-745E66A050F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathPractice", "MathPractice\MathPractice.csproj", "{40FCA462-58B6-4EDE-91F7-745E66A050F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayPractice", "ArrayPractice\ArrayPractice.csproj", "{283F4981-90B3-4A58-931E-072F1D9C1C97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayPractice", "ArrayPractice\ArrayPractice.csproj", "{283F4981-90B3-4A58-931E-072F1D9C1C97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodsPractice", "MethodsPractice\MethodsPractice.csproj", "{71CEC919-4845-4450-868B-392869FA806B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodsPractice", "MethodsPractice\MethodsPractice.csproj", "{71CEC919-4845-4450-868B-392869FA806B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-1-Intro", "OOP-1-Intro\OOP-1-Intro.csproj", "{227FF6FD-8C38-4A38-8733-584AE0ABD0C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP-1-Intro", "OOP-1-Intro\OOP-1-Intro.csproj", "{227FF6FD-8C38-4A38-8733-584AE0ABD0C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-2-ObjClassStruct", "OOP-2-ObjClassStruct\OOP-2-ObjClassStruct.csproj", "{1165A89E-0695-4055-A2CB-78209E20E887}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP-2-ObjClassStruct", "OOP-2-ObjClassStruct\OOP-2-ObjClassStruct.csproj", "{1165A89E-0695-4055-A2CB-78209E20E887}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-3-Constructors", "OOP-3-Constructors\OOP-3-Constructors.csproj", "{3F85800D-33BB-4A00-8395-0F2C077A4E10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP-3-Constructors", "OOP-3-Constructors\OOP-3-Constructors.csproj", "{3F85800D-33BB-4A00-8395-0F2C077A4E10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-4-Incapsulation", "OOP-4-Incapsulation\OOP-4-Incapsulation.csproj", "{AEBCAEF5-3AB1-41AE-A6E1-C9812C4D8FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP-4-Incapsulation", "OOP-4-Incapsulation\OOP-4-Incapsulation.csproj", "{AEBCAEF5-3AB1-41AE-A6E1-C9812C4D8FC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-6-ExtensMethods", "OOP-6-ExtensMethods\OOP-6-ExtensMethods.csproj", "{980FE761-3AE7-42C7-8C7B-B3E6C0C3A61E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP-6-ExtensMethods", "OOP-6-ExtensMethods\OOP-6-ExtensMethods.csproj", "{980FE761-3AE7-42C7-8C7B-B3E6C0C3A61E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP-7-Inherit", "OOP-7-Inherit\OOP-7-Inherit.csproj", "{AE659FCC-4190-48FB-9FA2-34D205AF51A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{980FE761-3AE7-42C7-8C7B-B3E6C0C3A61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{980FE761-3AE7-42C7-8C7B-B3E6C0C3A61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{980FE761-3AE7-42C7-8C7B-B3E6C0C3A61E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE659FCC-4190-48FB-9FA2-34D205AF51A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE659FCC-4190-48FB-9FA2-34D205AF51A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE659FCC-4190-48FB-9FA2-34D205AF51A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE659FCC-4190-48FB-9FA2-34D205AF51A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
