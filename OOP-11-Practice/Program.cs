@@ -50,7 +50,7 @@
             //если продавец выполнил план больше, чем на 100%, то его премия удваивается, а если больше, чем на 200% - премия утраивается;
             if (percent > 100) { bonus = bonus * 2; }
             else if (percent > 200) { bonus = bonus * 3; }
-            else { base.SetBonus(bonus); }
+             base.SetBonus(bonus); 
         }
     }
     //класс Manager наследовать от класса Employee.
@@ -69,7 +69,7 @@
             //если менеджер обслужил больше, чем 100 клиентов, то его премия увеличивается на 500, а если больше, чем 150 клиентов - премия увеличивается на 1000;
             if (quantity > 100) { bonus = bonus + 500; }
             else if (quantity > 150) { bonus = bonus + 1000; }
-            else { base.SetBonus(bonus); }
+            base.SetBonus(bonus); 
         }
     }
     //создать класс Company
@@ -123,15 +123,17 @@
                 new Employee ("Employee Janitor", 290),
             };
             Company company = new Company(employees);
-            Console.WriteLine("Employees data by default:");
+            Console.WriteLine($"\tEmployees salary without bonuces:");
             for (int i = 0; i < employees.Length; i++)
             {
                 Console.WriteLine(company.GetNameSalary(i));
             }
             Console.WriteLine($"Total to pay: {company.TotalToPay()}");
+            Console.WriteLine();
             company.GiveEverybodyBonus(300);
             Console.WriteLine("Giving 300 everybody!..processing..");
-            
+            Console.WriteLine();
+            Console.WriteLine($"\tEmployees salary with bonuces:");
             for (int i = 0; i < employees.Length; i++) 
             {
                 Console.WriteLine(company.GetNameSalary(i));
