@@ -19,21 +19,29 @@
             this.warranty = warranty;
 
         }
+        public virtual void GetFullInfo() 
+        { 
+            Console.WriteLine($"Cars: quantity: {quantity}, warranity: {warranty}"); 
+        }
     }
     //создать дочерние классы WV, Toyota, унаследовав класс Car;
     //в дочерних классах переопределить и перегрузить методы родительского класса;
     public class WV:Car
     {
         public WV (int q)
-        { quantity = q; }
+        {
+            quantity = q; 
+        }
         public override void GetQuantity() 
         {
             Console.WriteLine($"WV cars quantity to use: {quantity}");
         }
         //в дочерних классах создать метод GetFullInfo() с запретом на переопределение при наследовании
         //с выводом полной информации о выпущенном количестве и сроке гарантийного обслуживания в консоль;
-        public void GetFullInfo()
-        { Console.WriteLine($"WV cars: quantity : {quantity}, warranity: {warranty}"); }
+        public sealed override void GetFullInfo()
+        { 
+            Console.WriteLine($"WV cars: quantity : {quantity}, warranity: {warranty}"); 
+        }
     }
 
     public class Toyota : Car
@@ -46,22 +54,27 @@
         }
         //в дочерних классах создать метод GetFullInfo() с запретом на переопределение при наследовании
         //с выводом полной информации о выпущенном количестве и сроке гарантийного обслуживания в консоль;
-        public void GetFullInfo()
-        { Console.WriteLine($"Toyota cars: quantity : {quantity}, warranity: {warranty}"); }
+        public sealed override void GetFullInfo()
+        { 
+            Console.WriteLine($"Toyota cars: quantity : {quantity}, warranity: {warranty}"); 
+        }
     }
 
     //создать новый класс Audi, унаследоваться от класса WV. В классе Audi переопределить и перегрузить доступные методы;
     public class Audi : WV
     {
         public Audi (int q) : base(q)
-        { quantity = q; }
+        { 
+        }
 
         public override void GetQuantity()
         {
             Console.WriteLine($"Audi cars quantity to use: {quantity}");
         }
         public new void GetFullInfo()
-        { Console.WriteLine($"Audi cars: quantity : {quantity}, warranity: {warranty}"); }
+        { 
+            Console.WriteLine($"Audi cars: quantity : {quantity}, warranity: {warranty}");
+        }
     }
     internal class Program
     {
