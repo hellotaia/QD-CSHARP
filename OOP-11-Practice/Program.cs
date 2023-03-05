@@ -48,8 +48,14 @@
         public override void SetBonus(decimal bonus)
         {
             //если продавец выполнил план больше, чем на 100%, то его премия удваивается, а если больше, чем на 200% - премия утраивается;
-            if (percent > 100) { bonus = bonus * 2; }
-            else if (percent > 200) { bonus = bonus * 3; }
+            if (percent > 100 && percent<200) 
+            { 
+                bonus = bonus * 2;
+            }
+            else if (percent >= 200)
+            { 
+                bonus = bonus * 3; 
+            }
              base.SetBonus(bonus); 
         }
     }
@@ -67,8 +73,14 @@
         public override void SetBonus(decimal bonus)
         {
             //если менеджер обслужил больше, чем 100 клиентов, то его премия увеличивается на 500, а если больше, чем 150 клиентов - премия увеличивается на 1000;
-            if (quantity > 100) { bonus = bonus + 500; }
-            else if (quantity > 150) { bonus = bonus + 1000; }
+            if (quantity > 100 && quantity < 150) 
+            { 
+                bonus = bonus + 500; 
+            }
+            else if (quantity >= 150) 
+            {
+                bonus = bonus + 1000; 
+            }
             base.SetBonus(bonus); 
         }
     }
