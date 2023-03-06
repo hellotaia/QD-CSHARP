@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.OOP-10-Generics", "OOP-10
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.OOP-11-Practice", "OOP-11-Practice\4.OOP-11-Practice.csproj", "{2690B4A8-DCB9-4CE1-A32A-17E451DF6880}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.Exceptions-Pract", "5.Exceptions-Pract\5.Exceptions-Pract.csproj", "{43316C55-7217-41D1-B524-D033639AA035}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{2690B4A8-DCB9-4CE1-A32A-17E451DF6880}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2690B4A8-DCB9-4CE1-A32A-17E451DF6880}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2690B4A8-DCB9-4CE1-A32A-17E451DF6880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43316C55-7217-41D1-B524-D033639AA035}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43316C55-7217-41D1-B524-D033639AA035}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43316C55-7217-41D1-B524-D033639AA035}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43316C55-7217-41D1-B524-D033639AA035}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

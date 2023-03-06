@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 
 namespace _5.Exceptions_Pract
@@ -9,11 +10,13 @@ namespace _5.Exceptions_Pract
         {
             int totalLogEntites = 0;
             int errorEntities = 0;
+            int CritCount = 0;
 
             try
             {
                 using (StreamReader sreader = new StreamReader(logFilePath))
                 {
+
                     string logLine;
                     while ((logLine = sreader.ReadLine()) != null)
                     {
@@ -24,23 +27,35 @@ namespace _5.Exceptions_Pract
                         {
                             errorEntities++;
 
+                            if (Regex.IsMatch(logLine, @"\b(CRITICAL ERROR)\b"))
+                            {
+                                CritCount++;
+                            }
+
                             //Logs errors to the file
                             using (StreamWriter swriter = new StreamWriter("errors.log"))
                             {
                                 swriter.WriteLine(logLine);
+                                swriter.WriteLine();
                             }
+                        }
 
-                            //Checking criticals
-                            if (Regex.IsMatch(logLine, @"\b(CRITICAL ERROR)\b"))
-                            {
-                                throw new CriticalException(logLine);
-                            }
+                    }
 
+                }
+                //Checking criticals
+                using (StreamReader sreader = new StreamReader(logFilePath))
+                {
+                    string logLine;
+                    while ((logLine = sreader.ReadLine()) != null)
+                    {
+                        if (Regex.IsMatch(logLine, @"\b(CRITICAL ERROR)\b"))
+                        {
+                            throw new CriticalException(logLine);
                         }
                     }
                 }
-                double ratio = totalLogEntites / errorEntities;
-                return ratio;
+                return 0;
             }
             catch (FileNotFoundException e)
             {
@@ -50,11 +65,6 @@ namespace _5.Exceptions_Pract
             catch (IOException e)
             {
                 Console.WriteLine("Some exception is came up: " + e.Message);
-                return 0;
-            }
-            catch (OutOfMemoryException e )
-            {
-                Console.WriteLine("Out of memory exception: " + e.Message);
                 return 0;
             }
             catch (CriticalException e)
@@ -67,24 +77,22 @@ namespace _5.Exceptions_Pract
                 Console.WriteLine("Please do not devide by zero : " + e.Message);
                 return 0;
             }
-            finally 
+            finally
             {
                 //Totals to the console
                 Console.WriteLine("Total errors: " + errorEntities);
                 Console.WriteLine("Total log entities: " + totalLogEntites);
-                Console.WriteLine("Total critical errors: " + CriticalException.Ccount);
+                Console.WriteLine("Total critical errors: " + CritCount);
 
-                //Clearing critical count variable
-                CriticalException.Ccount = 0;
+                double ratio = totalLogEntites / errorEntities;
+                Console.WriteLine("Ratio: " + ratio);
             }
     }
         //Voiding critical exception 
         public class CriticalException : Exception
         {
-            public static int Ccount { get; set; } = 0;
             public CriticalException(string message):base(message) 
             {
-                Ccount++;
             }
         }
     
@@ -96,10 +104,8 @@ namespace _5.Exceptions_Pract
                 string errorFilePath = "errors.log";
 
                 ErrorCatcher catcher = new ErrorCatcher();
-
+                
                 double ratio = Catcher(logFilePath);
-                Console.WriteLine("Ratio: " + ratio);
-
             }
         }
     }
