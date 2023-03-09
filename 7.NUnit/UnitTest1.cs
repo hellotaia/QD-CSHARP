@@ -9,13 +9,14 @@
         }
 
         //создать две одинаковые строки и проверить что они равны;
+        //constraint model
         [Test, Retry(5),MaxTime(7), Category("stringTest"),Order(1)]
         public void Test1()
         {
             Console.WriteLine("Test1. Checking if strings are equal.. ");
             string string1 = "qwerty";
             string string2 = "qwerty";
-            Assert.AreEqual(string1 ,string2, "Strings are not equal");
+            Assert.That(string2, Is.EqualTo(string1), "Strings are not equal");
             Console.WriteLine("\tStrings are equal");
         }
 
